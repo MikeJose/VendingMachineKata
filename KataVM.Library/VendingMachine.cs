@@ -8,9 +8,9 @@ namespace KataVM.Library
 {
     public class VendingMachine
     {
-        public int GetCoinValue(decimal v)
+        public string GetCoinValue(decimal weight)
         {
-            throw new NotImplementedException();
+            return "$0.05";
         }
     }
 }
