@@ -76,13 +76,13 @@ namespace KataVM.Library
             switch(productID)
             {
                 case 1:
-                    return "Cola";
+                    return PurchaseCola();
                 case 2:
-                    return "Chips";
+                    return PurchaseChips();
                 case 3:
-                    return "Candy";
+                    return PurchaseCandy();
                 default:
-                    return "Error";
+                    return "ERROR";
             }
         }
 
