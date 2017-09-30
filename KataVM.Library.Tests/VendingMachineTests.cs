@@ -173,5 +173,20 @@ namespace KataVM.Library.Tests
 
             Assert.AreEqual(1, vendingMachine.ColaInventory());
         }
+
+        [Test]
+        public void ChipsBoughtReturnsCorrectInventory()
+        {
+            vendingMachine.GetCoinValue(0.2m);
+            vendingMachine.GetCoinValue(0.2m);
+            vendingMachine.GetCoinValue(0.2m);
+            vendingMachine.GetCoinValue(0.2m);
+
+            vendingMachine.LoadMachine(0, 2, 0);
+
+            vendingMachine.SelectProduct(2);
+
+            Assert.AreEqual(1, vendingMachine.ChipsInventory());
+        }
     }
 }
