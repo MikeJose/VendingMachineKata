@@ -98,6 +98,27 @@ namespace KataVM.Library
             }
         }
 
+        public string PurchaseChips()
+        {
+            if(ChipsInventory() >= 1)
+            {
+                Product chips = inventory["Chips"];
+
+                if(amountInserted >= chips.Price)
+                {
+                    return "THANK YOU";
+                }
+                else
+                {
+                    return "PRICE " + chips.Price.ToString("C");
+                }
+            }
+            else
+            {
+                return "SOLD OUT";
+            }
+        }
+
         public int CandyInventory()
         {
             if (inventory.ContainsKey("Candy"))
@@ -197,10 +218,7 @@ namespace KataVM.Library
             return totalProducts;
         }
 
-        public int PurchaseChips()
-        {
-            throw new NotImplementedException();
-        }
+       
 
 
 
