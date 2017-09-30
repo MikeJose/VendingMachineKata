@@ -54,7 +54,7 @@ namespace KataVM.Library.Tests
         {
             vendingMachine.GetCoinValue(0.176m);
             vendingMachine.GetCoinValue(0.08m);
-            Assert.AreEqual("$0.15", vendingMachine.ReturnCoins());
+            Assert.AreEqual("INSERT COIN", vendingMachine.ReturnCoins());
         }
     }
 }
