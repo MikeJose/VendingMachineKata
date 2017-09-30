@@ -137,7 +137,13 @@ namespace KataVM.Library
 
         public int CandyInventory()
         {
-            throw new NotImplementedException();
+            if (inventory.ContainsKey("Candy"))
+            {
+                Product candy = inventory["Candy"];
+                return candy.NumberInMachine;
+            }
+
+            return 0;
         }
 
         public int ChipsInventory()
