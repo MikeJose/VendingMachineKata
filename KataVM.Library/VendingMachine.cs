@@ -39,9 +39,9 @@ namespace KataVM.Library
             return "INSERT COIN";
         }
 
-        public int ReturnCoins()
+        public string ReturnCoins()
         {
-            throw new NotImplementedException();
+            return amountInserted.ToString("C");
         }
     }
 }
