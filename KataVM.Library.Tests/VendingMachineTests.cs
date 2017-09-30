@@ -56,5 +56,11 @@ namespace KataVM.Library.Tests
             vendingMachine.GetCoinValue(0.08m);
             Assert.AreEqual("INSERT COIN", vendingMachine.ReturnCoins());
         }
+
+        [Test]
+        public void WhenColaSelectedReturnsCola()
+        {
+            Assert.AreEqual("Cola", vendingMachine.SelectProduct(1));
+        }
     }
 }

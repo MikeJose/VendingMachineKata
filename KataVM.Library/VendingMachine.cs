@@ -35,17 +35,26 @@ namespace KataVM.Library
 
         public string CoinRejected()
         {
-            //return coin to slot
+            //I would call the user interface method that communicates to the actual coin slot
+            //and I would pass it the inserted coin
+
             return "INSERT COIN";
         }
 
         public string ReturnCoins()
         {
-            //return amountInserted to coin slot
+            //I would call the user interface method that communicates to the actual coin slot
+            //and I would pass it the value of amountInserted, so that it would know how
+            //much money to release to the coin slot
 
             amountInserted = 0;
 
             return "INSERT COIN";
+        }
+
+        public int SelectProduct(int v)
+        {
+            throw new NotImplementedException();
         }
     }
 }
