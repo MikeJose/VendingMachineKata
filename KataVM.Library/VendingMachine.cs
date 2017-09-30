@@ -54,7 +54,15 @@ namespace KataVM.Library
 
         public string SelectProduct(int productID)
         {
-            return "Cola";
+            switch(productID)
+            {
+                case 1:
+                    return "Cola";
+                case 2:
+                    return "Chips";
+                default:
+                    return "Error";
+            }
         }
     }
 }
