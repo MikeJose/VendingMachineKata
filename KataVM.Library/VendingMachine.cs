@@ -8,7 +8,10 @@ namespace KataVM.Library
 {
     public class VendingMachine
     {
-        public decimal amountInserted { get; set; }
+        //Local Variables
+        public decimal amountInserted { get; set; }       
+
+        //----------------------------------------------------------------
 
         public string GetCoinValue(decimal weight)
         {
@@ -67,8 +70,14 @@ namespace KataVM.Library
             }
         }
 
+        public int LoadMachine()
+        {
+            throw new NotImplementedException();
+        }
+
         public int ColaInventory()
         {
+           
             return 0;
         }
     }
