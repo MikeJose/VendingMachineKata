@@ -101,5 +101,18 @@ namespace KataVM.Library.Tests
         {
             Assert.AreEqual("Candy", vendingMachine.SelectProduct(3));
         }
+
+        [Test]
+        public void WhenColaSelectedChecksPrice()
+        {
+            vendingMachine.GetCoinValue(0.2m);
+            vendingMachine.GetCoinValue(0.2m);
+            vendingMachine.GetCoinValue(0.2m);
+            vendingMachine.GetCoinValue(0.2m);
+
+            vendingMachine.LoadMachine(1, 0, 0);
+
+            Assert.AreEqual("THANK YOU", vendingMachine.PurchaseCola());
+        }
     }
 }
