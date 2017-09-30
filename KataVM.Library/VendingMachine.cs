@@ -59,6 +59,15 @@ namespace KataVM.Library
             return "INSERT COIN";
         }
 
+        public string DispenseChange(decimal change)
+        {
+            //I would call the user interface method that communicate to the actual coin slot
+            //and I would pass it the value of change, so that it would know how much money
+            //to release to the coin slot
+
+            return change.ToString("C");
+        }
+
         //----------------------------------------------------------------------------------
         //Product Methods
 
@@ -243,10 +252,7 @@ namespace KataVM.Library
             return totalProducts;
         }
 
-        public int DispenseChange(decimal v)
-        {
-            throw new NotImplementedException();
-        }
+        
 
 
 
