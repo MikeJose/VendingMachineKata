@@ -52,9 +52,9 @@ namespace KataVM.Library
             return "INSERT COIN";
         }
 
-        public int SelectProduct(int v)
+        public string SelectProduct(int productID)
         {
-            throw new NotImplementedException();
+            return "Cola";
         }
     }
 }
