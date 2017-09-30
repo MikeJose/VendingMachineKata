@@ -98,7 +98,7 @@ namespace KataVM.Library
             }
         }
 
-        public string PurchaseChips()
+        public string PurchaseCandy()
         {
             if(ChipsInventory() >= 1)
             {
