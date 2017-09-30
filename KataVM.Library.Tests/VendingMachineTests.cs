@@ -60,7 +60,7 @@ namespace KataVM.Library.Tests
         [Test]
         public void WhenMachineLoadedReturnsProductsLoaded()
         {
-            Assert.AreEqual(3, vendingMachine.LoadMachine());
+            Assert.AreEqual(3, vendingMachine.LoadMachine(1,1,1));
         }
 
         [Test]

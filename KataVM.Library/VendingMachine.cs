@@ -9,7 +9,9 @@ namespace KataVM.Library
     public class VendingMachine
     {
         //Local Variables
-        public decimal amountInserted { get; set; }       
+        public decimal amountInserted { get; set; }
+
+        Dictionary<int, Product> inventory = new Dictionary<int, Product>();
 
         //----------------------------------------------------------------
 
@@ -70,9 +72,27 @@ namespace KataVM.Library
             }
         }
 
-        public int LoadMachine()
+        public int LoadMachine(int numCola, int numChips, int numCandy)
         {
-            throw new NotImplementedException();
+            for(int i = 0; i < numCola; i++)
+            {
+                Product cola = new Product("Cola", 1, 1m);
+                inventory.Add(1, cola);
+            }
+
+            for (int i = 0; i < numChips; i++)
+            {
+                Product chips = new Product("Chips", 2, 0.5m);
+                inventory.Add(2, chips);
+            }
+
+            for (int i = 0; i < numCandy; i++)
+            {
+                Product candy = new Product("Candy", 3, 0.65m);
+                inventory.Add(3, candy);
+            }
+
+            return inventory.Count;
         }
 
         public int ColaInventory()
