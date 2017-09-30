@@ -10,7 +10,15 @@ namespace KataVM.Library
     {
         public string GetCoinValue(decimal weight)
         {
-            return "$0.05";
+            switch (weight)
+            {
+                case 0.176m:
+                    return "$0.05";
+                case 0.08m:
+                    return "$0.10";
+                default:
+                    return "Error";
+            }
         }
     }
 }
