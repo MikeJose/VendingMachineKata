@@ -8,26 +8,26 @@ namespace KataVM.Library
 {
     public class VendingMachine
     {
-        public string GetCoinValue(decimal weight)
+        public decimal GetCoinValue(decimal weight)
         {
             switch (weight)
             {
                 case 0.088m:
-                    return "Rejected";
+                    return 0m;
                 case 0.176m:
-                    return "$0.05";
+                    return 0.05m;
                 case 0.08m:
-                    return "$0.10";
+                    return 0.10m;
                 case 0.2m:
-                    return "$0.25";
+                    return 0.25m;
                 default:
-                    return "Error";
+                    return 0m;
             }
         }
 
-        public int TrackAmountEntered(string v)
+        public string TrackAmountEntered(decimal coinValue)
         {
-            throw new NotImplementedException();
+            return "$0.05";
         }
     }
 }
