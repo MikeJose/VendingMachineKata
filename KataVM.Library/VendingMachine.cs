@@ -15,7 +15,7 @@ namespace KataVM.Library
             switch (weight)
             {
                 case 0.088m:
-                    return "Rejected";
+                    return "INSERT COIN";
                 case 0.176m:
                     return TrackAmountEntered(0.05m);
                 case 0.08m:
@@ -32,5 +32,6 @@ namespace KataVM.Library
             amountInserted += coinValue;
             return amountInserted.ToString("C");
         }
+
     }
 }
