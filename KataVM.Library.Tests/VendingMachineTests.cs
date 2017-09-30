@@ -37,9 +37,9 @@ namespace KataVM.Library.Tests
         }
 
         [Test]
-        public void WhenPennyWeightEnteredReturnsRejected()
+        public void WhenPennyWeightEnteredReturnsCoinToSlot()
         {
-            Assert.AreEqual("Rejected", vendingMachine.GetCoinValue(0.088m));
+            Assert.AreEqual("INSERT COIN", vendingMachine.GetCoinValue(0.088m));
         }
 
         [Test]
