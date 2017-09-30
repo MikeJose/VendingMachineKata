@@ -8,6 +8,8 @@ namespace KataVM.Library
 {
     public class VendingMachine
     {
+        private decimal amountInserted;
+
         public decimal GetCoinValue(decimal weight)
         {
             switch (weight)
@@ -27,7 +29,8 @@ namespace KataVM.Library
 
         public string TrackAmountEntered(decimal coinValue)
         {
-            return "$0.05";
+            amountInserted += coinValue;
+            return amountInserted.ToString("C");
         }
     }
 }
