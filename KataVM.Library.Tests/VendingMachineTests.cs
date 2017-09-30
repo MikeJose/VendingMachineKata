@@ -46,6 +46,7 @@ namespace KataVM.Library.Tests
         public void WhenCoinsInsertedReturnTotalInserted()
         {
             Assert.AreEqual("$0.05", vendingMachine.TrackAmountEntered(vendingMachine.GetCoinValue(0.176m)));
+            Assert.AreEqual("$0.10", vendingMachine.TrackAmountEntered(vendingMachine.GetCoinValue(0.176m)));
         }
     }
 }
