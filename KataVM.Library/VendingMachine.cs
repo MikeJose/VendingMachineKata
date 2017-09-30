@@ -102,6 +102,8 @@ namespace KataVM.Library
                 if(amountInserted >= cola.Price)
                 {
                     DispenseChange(amountInserted - cola.Price);
+                    DispenseCola();
+
                     return "THANK YOU";
                 }
                 else
@@ -157,6 +159,15 @@ namespace KataVM.Library
             {
                 return "SOLD OUT";
             }
+        }
+
+        public void DispenseCola()
+        {
+            //I would call the user interface method that communicates to the actual product
+            //dispenseer and pass it the product id of Cola to dispense
+
+            Product cola = inventory["Cola"];
+            cola.SubtractCount(1);
         }
 
         //Inventory Methods
