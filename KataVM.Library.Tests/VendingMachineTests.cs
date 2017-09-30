@@ -121,5 +121,11 @@ namespace KataVM.Library.Tests
             vendingMachine.LoadMachine(1, 0, 0);
             Assert.AreEqual("PRICE $1.00", vendingMachine.PurchaseCola());
         }
+
+        [Test]
+        public void WhenColaAndNoInventoryReturnsSoldOut()
+        {
+            Assert.AreEqual("SOLD OUT", vendingMachine.PurchaseCola());
+        }
     }
 }
