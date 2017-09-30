@@ -68,6 +68,11 @@ namespace KataVM.Library
             return change.ToString("C");
         }
 
+        public string ExactChange()
+        {
+            return "EXACT CHANGE ONLY";
+        }
+
         //----------------------------------------------------------------------------------
         //Product Methods
 
@@ -165,11 +170,6 @@ namespace KataVM.Library
             }
 
             return 0;
-        }
-
-        public int ExactChange()
-        {
-            throw new NotImplementedException();
         }
 
         public int ChipsInventory()
