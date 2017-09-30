@@ -98,7 +98,7 @@ namespace KataVM.Library
             }
         }
 
-        public string PurchaseCandy()
+        public string PurchaseChips()
         {
             if(ChipsInventory() >= 1)
             {
@@ -111,6 +111,27 @@ namespace KataVM.Library
                 else
                 {
                     return "PRICE " + chips.Price.ToString("C");
+                }
+            }
+            else
+            {
+                return "SOLD OUT";
+            }
+        }
+
+        public string PurchaseCandy()
+        {
+            if(CandyInventory() >= 1)
+            {
+                Product candy = inventory["Candy"];
+
+                if(amountInserted >= candy.Price)
+                {
+                    return "THANK YOU";
+                }
+                else
+                {
+                    return "PRICE " + candy.Price.ToString("C");
                 }
             }
             else

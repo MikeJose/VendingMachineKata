@@ -136,20 +136,20 @@ namespace KataVM.Library.Tests
 
             vendingMachine.LoadMachine(0, 1, 0);
 
-            Assert.AreEqual("THANK YOU", vendingMachine.PurchaseCandy());
+            Assert.AreEqual("THANK YOU", vendingMachine.PurchaseChips());
         }
 
         [Test]
         public void WhenChipsSelectedAndNoMoneyReturnsPrice()
         {
             vendingMachine.LoadMachine(0, 1, 0);
-            Assert.AreEqual("PRICE $0.50", vendingMachine.PurchaseCandy());
+            Assert.AreEqual("PRICE $0.50", vendingMachine.PurchaseChips());
         }
 
         [Test]
         public void WhenChipsAndNoInventoryReturnsSoldOut()
         {
-            Assert.AreEqual("SOLD OUT", vendingMachine.PurchaseCandy());
+            Assert.AreEqual("SOLD OUT", vendingMachine.PurchaseChips());
         }
 
         [Test]
