@@ -38,5 +38,10 @@ namespace KataVM.Library
             //return coin to slot
             return "INSERT COIN";
         }
+
+        public int ReturnCoins()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
