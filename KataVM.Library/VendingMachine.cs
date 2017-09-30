@@ -60,6 +60,8 @@ namespace KataVM.Library
                     return "Cola";
                 case 2:
                     return "Chips";
+                case 3:
+                    return "Candy";
                 default:
                     return "Error";
             }
