@@ -89,7 +89,7 @@ namespace KataVM.Library
                 }
                 else
                 {
-                    return "PRICE" + cola.Price.ToString("C");
+                    return "PRICE " + cola.Price.ToString("C");
                 }
             }
             else
