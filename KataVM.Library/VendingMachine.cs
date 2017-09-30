@@ -197,7 +197,12 @@ namespace KataVM.Library
             return totalProducts;
         }
 
-        
+        public int PurchaseChips()
+        {
+            throw new NotImplementedException();
+        }
+
+
 
         //-------------------------------------------------------------------------------
     }
