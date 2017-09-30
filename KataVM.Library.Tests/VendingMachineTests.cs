@@ -26,5 +26,13 @@ namespace KataVM.Library.Tests
             Assert.AreEqual("$0.10", vendingMachine.GetCoinValue(0.08m));
         }
 
+        [Test]
+        public void WhenQuarterWeightEnteredReturnsValue()
+        {
+            VendingMachine vendingMachine = new VendingMachine();
+
+            Assert.AreEqual("$0.25", vendingMachine.GetCoinValue(0.2m));
+        }
+
     }
 }
