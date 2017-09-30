@@ -135,6 +135,11 @@ namespace KataVM.Library
             return totalProducts;
         }
 
+        public int CandyInventory()
+        {
+            throw new NotImplementedException();
+        }
+
         public int ChipsInventory()
         {
             if (inventory.ContainsKey("Chips"))
