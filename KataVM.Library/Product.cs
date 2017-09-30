@@ -14,6 +14,8 @@ namespace KataVM.Library
 
         public decimal Price { get; set; }
 
+        public int NumberInMachine { get; set; }
+
         //------------------------------------------
 
         public Product()
@@ -21,11 +23,21 @@ namespace KataVM.Library
 
         }
 
-        public Product(string pName, int pID, decimal pPrice)
+        public Product(string pName, decimal pPrice, int num)
         {
             Name = pName;
-            ID = pID;
             Price = pPrice;
+            NumberInMachine = num;
+        }
+
+        public void AddCount(int numAdded)
+        {
+            NumberInMachine += numAdded;
+        }
+
+        public void SubtractCount(int numSubtracted)
+        {
+            NumberInMachine -= numSubtracted;
         }
     }
 }

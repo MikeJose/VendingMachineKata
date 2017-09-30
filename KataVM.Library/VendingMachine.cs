@@ -11,7 +11,7 @@ namespace KataVM.Library
         //Local Variables
         public decimal amountInserted { get; set; }
 
-        Dictionary<int, Product> inventory = new Dictionary<int, Product>();
+        Dictionary<string, Product> inventory = new Dictionary<string, Product>();
 
         //----------------------------------------------------------------
 
@@ -74,30 +74,75 @@ namespace KataVM.Library
 
         public int LoadMachine(int numCola, int numChips, int numCandy)
         {
-            for(int i = 0; i < numCola; i++)
+            int availableCola = 0;
+            int availableChips = 0;
+            int availableCandy = 0;
+
+            if(numCola >= 1)
             {
-                Product cola = new Product("Cola", 1, 1m);
-                inventory.Add(1, cola);
+                if(inventory.ContainsKey("Cola"))
+                {
+                    Product cola = inventory["Cola"];
+                    cola.AddCount(numCola);
+
+                    availableCola = cola.NumberInMachine;
+                }
+                else
+                {
+                    Product cola = new Product("Cola", 1m, numCola);
+                    inventory.Add(cola.Name, cola);
+
+                    availableCola = cola.NumberInMachine;
+                }
+            }
+            if(numChips >= 1)
+            {
+                if(inventory.ContainsKey("Chips"))
+                {
+                    Product chips = inventory["Chips"];
+                    chips.AddCount(numChips);
+
+                    availableChips = chips.NumberInMachine;
+                }
+                else
+                {
+                    Product chips = new Product("Chips", 0.5m, numChips);
+                    inventory.Add(chips.Name, chips);
+
+                    availableChips = chips.NumberInMachine;
+                }
+            }
+            if(numCandy >= 1)
+            {
+                if(inventory.ContainsKey("Candy"))
+                {
+                    Product candy = inventory["Candy"];
+                    candy.AddCount(numCandy);
+
+                    availableCandy = candy.NumberInMachine;
+                }
+                else
+                {
+                    Product candy = new Product("Candy", 0.65m, numCandy);
+                    inventory.Add(candy.Name, candy);
+
+                    availableCandy = candy.NumberInMachine;
+                }
             }
 
-            for (int i = 0; i < numChips; i++)
-            {
-                Product chips = new Product("Chips", 2, 0.5m);
-                inventory.Add(2, chips);
-            }
+            int totalProducts = availableCandy + availableChips + availableCola;
 
-            for (int i = 0; i < numCandy; i++)
-            {
-                Product candy = new Product("Candy", 3, 0.65m);
-                inventory.Add(3, candy);
-            }
-
-            return inventory.Count;
+            return totalProducts;
         }
 
         public int ColaInventory()
         {
-           
+            if(inventory.ContainsKey("Cola"))
+            {
+                Product cola = inventory["Cola"];
+                return cola.NumberInMachine;
+            }
+
             return 0;
         }
     }
