@@ -24,5 +24,10 @@ namespace KataVM.Library
                     return "Error";
             }
         }
+
+        public int TrackAmountEntered(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
