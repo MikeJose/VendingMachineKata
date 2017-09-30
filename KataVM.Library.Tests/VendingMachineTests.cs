@@ -21,25 +21,25 @@ namespace KataVM.Library.Tests
         [Test]
         public void WhenWeightEnteredReturnsValue()
         {          
-            Assert.AreEqual(0.05, vendingMachine.GetCoinValue(0.176m));
+            Assert.AreEqual("$0.05", vendingMachine.GetCoinValue(0.176m));
         }
 
         [Test]
         public void WhenDimeWeightEnteredReturnsValue()
         {
-            Assert.AreEqual(0.10, vendingMachine.GetCoinValue(0.08m));
+            Assert.AreEqual("$0.10", vendingMachine.GetCoinValue(0.08m));
         }
 
         [Test]
         public void WhenQuarterWeightEnteredReturnsValue()
         {
-            Assert.AreEqual(0.25, vendingMachine.GetCoinValue(0.2m));
+            Assert.AreEqual("$0.25", vendingMachine.GetCoinValue(0.2m));
         }
 
         [Test]
         public void WhenPennyWeightEnteredReturnsRejected()
         {
-            Assert.AreEqual(0, vendingMachine.GetCoinValue(0.088m));
+            Assert.AreEqual("Rejected", vendingMachine.GetCoinValue(0.088m));
         }
 
         [Test]
