@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace KataVM.Library
 {
-    public class Class1
+    public class VendingMachine
     {
+        public int GetCoinValue(decimal v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
