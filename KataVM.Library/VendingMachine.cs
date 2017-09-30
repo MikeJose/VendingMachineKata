@@ -66,5 +66,10 @@ namespace KataVM.Library
                     return "Error";
             }
         }
+
+        public int ColaInventory()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

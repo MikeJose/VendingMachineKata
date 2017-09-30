@@ -58,6 +58,12 @@ namespace KataVM.Library.Tests
         }
 
         [Test]
+        public void WhenColaSelectedReturnsColaAvailable()
+        {
+            Assert.AreEqual(0, vendingMachine.ColaInventory());
+        }
+
+        [Test]
         public void WhenColaSelectedReturnsCola()
         {
             Assert.AreEqual("Cola", vendingMachine.SelectProduct(1));
