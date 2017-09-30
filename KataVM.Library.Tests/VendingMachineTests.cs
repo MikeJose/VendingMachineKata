@@ -158,5 +158,20 @@ namespace KataVM.Library.Tests
         {
             Assert.AreEqual("EXACT CHANGE ONLY", vendingMachine.ExactChange());
         }
+
+        [Test]
+        public void ColaBoughtReturnsCorrectInventory()
+        {
+            vendingMachine.GetCoinValue(0.2m);
+            vendingMachine.GetCoinValue(0.2m);
+            vendingMachine.GetCoinValue(0.2m);
+            vendingMachine.GetCoinValue(0.2m);
+
+            vendingMachine.LoadMachine(2, 0, 0);
+
+            vendingMachine.SelectProduct(1);
+
+            Assert.AreEqual(1, vendingMachine.ColaInventory());
+        }
     }
 }
