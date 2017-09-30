@@ -41,7 +41,11 @@ namespace KataVM.Library
 
         public string ReturnCoins()
         {
-            return amountInserted.ToString("C");
+            //return amountInserted to coin slot
+
+            amountInserted = 0;
+
+            return "INSERT COIN";
         }
     }
 }
