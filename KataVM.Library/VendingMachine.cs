@@ -12,6 +12,8 @@ namespace KataVM.Library
         {
             switch (weight)
             {
+                case 0.088m:
+                    return "Rejected";
                 case 0.176m:
                     return "$0.05";
                 case 0.08m:
