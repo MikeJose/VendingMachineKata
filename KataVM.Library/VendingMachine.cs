@@ -77,6 +77,8 @@ namespace KataVM.Library
             }
         }
 
+        //Purchase Methods
+
         public string PurchaseCola()
         {
             if(ColaInventory() >= 1)
@@ -139,6 +141,8 @@ namespace KataVM.Library
                 return "SOLD OUT";
             }
         }
+
+        //Inventory Methods
 
         public int CandyInventory()
         {
@@ -239,7 +243,12 @@ namespace KataVM.Library
             return totalProducts;
         }
 
-       
+        public int DispenseChange(decimal v)
+        {
+            throw new NotImplementedException();
+        }
+
+
 
 
 
