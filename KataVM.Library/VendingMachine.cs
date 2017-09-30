@@ -150,6 +150,8 @@ namespace KataVM.Library
                 if(amountInserted >= candy.Price)
                 {
                     DispenseChange(amountInserted - candy.Price);
+                    DispenseCandy();
+
                     return "THANK YOU";
                 }
                 else
@@ -179,6 +181,15 @@ namespace KataVM.Library
 
             Product chips = inventory["Chips"];
             chips.SubtractCount(1);
+        }
+
+        public void DispenseCandy()
+        {
+            //I would call the user interface method that communicates to the actual product
+            //dispenseer and pass it the product id of Candy to dispense
+
+            Product candy = inventory["Candy"];
+            candy.SubtractCount(1);
         }
 
         //Inventory Methods
