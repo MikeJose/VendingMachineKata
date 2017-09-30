@@ -16,6 +16,8 @@ namespace KataVM.Library
                     return "$0.05";
                 case 0.08m:
                     return "$0.10";
+                case 0.2m:
+                    return "$0.25";
                 default:
                     return "Error";
             }
