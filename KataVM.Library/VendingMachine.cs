@@ -96,6 +96,7 @@ namespace KataVM.Library
 
                 if(amountInserted >= cola.Price)
                 {
+                    DispenseChange(amountInserted - cola.Price);
                     return "THANK YOU";
                 }
                 else
@@ -117,6 +118,7 @@ namespace KataVM.Library
 
                 if(amountInserted >= chips.Price)
                 {
+                    DispenseChange(amountInserted - chips.Price);
                     return "THANK YOU";
                 }
                 else
@@ -138,6 +140,7 @@ namespace KataVM.Library
 
                 if(amountInserted >= candy.Price)
                 {
+                    DispenseChange(amountInserted - candy.Price);
                     return "THANK YOU";
                 }
                 else
