@@ -77,6 +77,27 @@ namespace KataVM.Library
             }
         }
 
+        public string PurchaseCola()
+        {
+            if(ColaInventory() >= 1)
+            {
+                Product cola = inventory["Cola"];
+
+                if(amountInserted >= cola.Price)
+                {
+                    return "THANK YOU";
+                }
+                else
+                {
+                    return "PRICE" + cola.Price.ToString("C");
+                }
+            }
+            else
+            {
+                return "SOLD OUT";
+            }
+        }
+
         public int CandyInventory()
         {
             if (inventory.ContainsKey("Candy"))
@@ -176,10 +197,7 @@ namespace KataVM.Library
             return totalProducts;
         }
 
-        public int PurchaseCola()
-        {
-            throw new NotImplementedException();
-        }
+        
 
         //-------------------------------------------------------------------------------
     }
