@@ -84,7 +84,6 @@ namespace KataVM.Library.Tests
             Assert.AreEqual(2, vendingMachine.CandyInventory());
         }
 
-
         [Test]
         public void WhenColaSelectedChecksPrice()
         {
@@ -152,6 +151,12 @@ namespace KataVM.Library.Tests
         public void ChangeNeededReturnsChange()
         {
             Assert.AreEqual("$0.25", vendingMachine.DispenseChange(0.25m));
+        }
+
+        [Test]
+        public void WhenExactChangeNeededReturnsExactChange()
+        {
+            Assert.AreEqual("EXACT CHANGE ONLY", vendingMachine.ExactChange());
         }
     }
 }

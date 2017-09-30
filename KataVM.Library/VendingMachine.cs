@@ -167,6 +167,11 @@ namespace KataVM.Library
             return 0;
         }
 
+        public int ExactChange()
+        {
+            throw new NotImplementedException();
+        }
+
         public int ChipsInventory()
         {
             if (inventory.ContainsKey("Chips"))
